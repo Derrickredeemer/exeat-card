@@ -2,196 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Exeat Booklet - Selula Royal School of Excellence</title>
+  <title>Selula Royal School of Excellence Timetable</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Selula Royal School of Excellence</h1>
+    <h2>Boarders Timetable</h2>
 
-<button class="download-btn" onclick="downloadPDF()">
-  Fill & Download Exeat Booklet
-</button>
+    <button onclick="downloadWord()">Download as Word (.docx)</button>
+    <button onclick="downloadPDF()">Download as PDF</button>
 
-<div class="booklet">
+    <div id="timetable">
+      <h3>Weekdays</h3>
+      <p><strong>Morning:</strong> 6am - 8am</p>
+      <p><strong>Evening:</strong> 7pm - 9pm</p>
 
-  <!-- COVER PAGE -->
-  <div class="page cover">
-    <h1>SELULA ROYAL SCHOOL OF EXCELLENCE</h1>
-    <h2>STUDENT EXEAT BOOKLET</h2>
+      <table border="1">
+        <tr><th>Day</th><th>Morning</th><th>Evening</th></tr>
+        <tr><td>Monday</td><td>Maths</td><td>Dangme</td></tr>
+        <tr><td>Tuesday</td><td>R.M.E</td><td>English</td></tr>
+        <tr><td>Wednesday</td><td>Science</td><td>C.A.D</td></tr>
+        <tr><td>Thursday</td><td>French</td><td>Social</td></tr>
+        <tr><td>Friday</td><td>Maths</td><td>English</td></tr>
+      </table>
 
-    <label>Academic Year:
-      <input type="text">
-    </label>
-
-    <label>Term:
-      <input type="text">
-    </label>
-
-    <label>Student Name:
-      <input type="text">
-    </label>
-
-    <label>Class:
-      <input type="text" placeholder="JHS ___">
-    </label>
-
-    <p class="footer-text">This booklet is valid for one academic term only</p>
-    <p class="card-footer">S-RoSE Exeat Card</p>
+      <h3>Weekends</h3>
+      <table border="1">
+        <tr><th>Day</th><th>Morning</th><th>Evening</th></tr>
+        <tr><td>Saturday</td><td>Science (3am - 5am)</td><td>Social (6pm - 8pm)</td></tr>
+        <tr><td>Sunday</td><td>C. Tech (3am - 5am)</td><td>Computing (7pm - 9pm)</td></tr>
+      </table>
+    </div>
   </div>
 
-  <!-- STUDENT INFORMATION -->
-  <div class="page">
-    <h3>Student Information</h3>
-
-    <label>Admission Number:
-      <input type="text">
-    </label>
-
-    <label>Date of Birth:
-      <input type="date">
-    </label>
-
-    <label>Gender:
-      <input type="text">
-    </label>
-
-    <label>Parent / Guardian Name:
-      <input type="text">
-    </label>
-
-    <label>Contact Number:
-      <input type="tel">
-    </label>
-
-    <label>Residential Address:
-      <input type="text">
-    </label>
-
-    <div class="photo-box">PASTE PHOTO</div>
-    <p class="card-footer">S-RoSE Exeat Card</p>
-  </div>
-
-  <!-- RULES -->
-  <div class="page">
-    <h3>Rules & Regulations</h3>
-    <ol>
-      <li>Exeat is granted only with approval.</li>
-      <li>Students must return on or before the approved time.</li>
-      <li>Late return attracts disciplinary action.</li>
-      <li>Booklet must be presented at the school gate.</li>
-      <li>Loss must be reported immediately.</li>
-      <li>This booklet remains the property of the school.</li>
-    </ol>
-    <p class="card-footer">S-RoSE Exeat Card</p>
-  </div>
-
-  <!-- EXEAT RECORD PAGE 1 -->
-  <div class="page">
-    <h3>Exeat Record</h3>
-
-    <label>Date Out:
-      <input type="date">
-    </label>
-
-    <label>Time Out:
-      <input type="time">
-    </label>
-
-    <label>Reason:
-      <input type="text">
-    </label>
-
-    <label>Destination:
-      <input type="text">
-    </label>
-
-    <label>Approved By (Housemaster):
-      <input type="text">
-    </label>
-
-    <label>Signature:
-      <input type="text">
-    </label>
-
-    <label>Date In:
-      <input type="date">
-    </label>
-
-    <label>Time In:
-      <input type="time">
-    </label>
-
-    <label>Gate Officer:
-      <input type="text">
-    </label>
-
-    <p class="card-footer">S-RoSE Exeat Card</p>
-  </div>
-
-  <!-- EXEAT RECORD PAGE 2 -->
-  <div class="page">
-    <h3>Exeat Record</h3>
-
-    <label>Date Out:
-      <input type="date">
-    </label>
-
-    <label>Time Out:
-      <input type="time">
-    </label>
-
-    <label>Reason:
-      <input type="text">
-    </label>
-
-    <label>Destination:
-      <input type="text">
-    </label>
-
-    <label>Approved By (Housemaster):
-      <input type="text">
-    </label>
-
-    <label>Signature:
-      <input type="text">
-    </label>
-
-    <label>Date In:
-      <input type="date">
-    </label>
-
-    <label>Time In:
-      <input type="time">
-    </label>
-
-    <label>Gate Officer:
-      <input type="text">
-    </label>
-
-    <p class="card-footer">S-RoSE Exeat Card</p>
-  </div>
-
-  <!-- AUTHORIZATION -->
-  <div class="page">
-    <h3>Authorization</h3>
-
-    <label>Headteacher’s Name:
-      <input type="text">
-    </label>
-
-    <label>Signature:
-      <input type="text">
-    </label>
-
-    <label>Date:
-      <input type="date">
-    </label>
-
-    <div class="stamp-box">SCHOOL STAMP</div>
-    <p class="card-footer">S-RoSE Exeat Card</p>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/docx@7.7.0/build/index.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
