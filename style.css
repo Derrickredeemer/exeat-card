@@ -2,42 +2,62 @@ body {
   font-family: "Times New Roman", serif;
   background: #eef3ff;
   margin: 0;
+  padding: 20px;
 }
 
 .download-btn {
   display: block;
-  margin: 20px auto;
-  padding: 12px 25px;
+  margin: 10px auto 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
   background: #003399;
   color: white;
   border: none;
-  font-size: 16px;
   cursor: pointer;
 }
 
-.booklet {
-  width: 105mm;
+/* Landscape Card */
+.card {
+  width: 280mm;   /* A4 landscape width (for printing) */
+  max-width: 100%;
+  height: 140mm;  /* A6-ish height */
   margin: auto;
-}
-
-.page {
-  width: 105mm;
-  height: 148mm;
-  background: #fff;
-  padding: 15px;
+  background: #ffffff;
   border: 1px solid #ccc;
+  padding: 15px;
   box-sizing: border-box;
-  margin-bottom: 10px;
-  page-break-after: always;
 }
 
-.cover {
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header {
   text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.header h2 {
+  font-size: 16px;
+  margin: 5px 0 15px 0;
+}
+
+/* Student Info */
+.student-info, .authorization {
+  width: 48%;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-size: 14px;
 }
 
@@ -46,29 +66,14 @@ input {
   border: none;
   border-bottom: 1px solid #000;
   outline: none;
-  font-size: 14px;
   background: transparent;
+  font-size: 14px;
+  padding: 2px 0;
 }
 
-.photo-box {
-  width: 120px;
-  height: 150px;
-  border: 1px solid #000;
+.footer {
   text-align: center;
-  line-height: 150px;
+  width: 100%;
   margin-top: 15px;
-}
-
-.stamp-box {
-  width: 150px;
-  height: 80px;
-  border: 1px dashed #000;
-  text-align: center;
-  line-height: 80px;
-  margin-top: 15px;
-}
-
-.footer-text {
   font-size: 12px;
-  margin-top: 10px;
 }
