@@ -1,0 +1,74 @@
+body {
+  font-family: "Times New Roman", serif;
+  background: #eef3ff;
+  margin: 0;
+}
+
+.download-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  background: #003399;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.booklet {
+  width: 105mm;
+  margin: auto;
+}
+
+.page {
+  width: 105mm;
+  height: 148mm;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  page-break-after: always;
+}
+
+.cover {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.photo-box {
+  width: 120px;
+  height: 150px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 150px;
+  margin-top: 15px;
+}
+
+.stamp-box {
+  width: 150px;
+  height: 80px;
+  border: 1px dashed #000;
+  text-align: center;
+  line-height: 80px;
+  margin-top: 15px;
+}
+
+.footer-text {
+  font-size: 12px;
+  margin-top: 10px;
+}
