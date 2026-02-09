@@ -8,7 +8,7 @@ body {
 .download-btn {
   display: block;
   margin: 10px auto 20px auto;
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 16px;
   background: #003399;
   color: white;
@@ -16,43 +16,27 @@ body {
   cursor: pointer;
 }
 
-/* Landscape Card */
-.card {
-  width: 280mm;   /* A4 landscape width (for printing) */
+.booklet {
+  width: 297mm; /* Landscape A4 width */
   max-width: 100%;
-  height: 140mm;  /* A6-ish height */
+  height: 210mm; /* Landscape A4 height */
   margin: auto;
+}
+
+.page {
+  width: 297mm;
+  height: 210mm;
   background: #ffffff;
   border: 1px solid #ccc;
-  padding: 15px;
   box-sizing: border-box;
-}
-
-.card-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.header {
-  text-align: center;
-  width: 100%;
+  padding: 15px;
   margin-bottom: 10px;
+  page-break-after: always;
+  position: relative;
 }
 
-.header h1 {
-  font-size: 20px;
-  margin: 0;
-}
-
-.header h2 {
-  font-size: 16px;
-  margin: 5px 0 15px 0;
-}
-
-/* Student Info */
-.student-info, .authorization {
-  width: 48%;
+h1, h2, h3 {
+  margin: 0 0 10px 0;
 }
 
 label {
@@ -71,9 +55,30 @@ input {
   padding: 2px 0;
 }
 
-.footer {
+.photo-box {
+  width: 120px;
+  height: 150px;
+  border: 1px solid #000;
   text-align: center;
-  width: 100%;
+  line-height: 150px;
   margin-top: 15px;
+}
+
+.stamp-box {
+  width: 150px;
+  height: 80px;
+  border: 1px dashed #000;
+  text-align: center;
+  line-height: 80px;
+  margin-top: 20px;
+}
+
+/* Footer for each page */
+.card-footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
   font-size: 12px;
+  color: #555;
 }
